@@ -1,4 +1,5 @@
 from collections import *
+
 NASA_file= open("NASA_access_log_Jul95")
 
 IPaddresses=[]
