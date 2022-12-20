@@ -1,4 +1,8 @@
 from collections import *
+import matplotlib.pyplot as plt
+import numpy
+
+
 
 NASA_file= open("NASA_access_log_Jul95")
 
@@ -37,3 +41,13 @@ print(f"The most frequent path was {Counter(path).most_common(1)}")
 print()
 
 print(f"The most common file type would be {Counter(type).most_common(1)}")
+
+print()
+
+ip_count= Counter(IPaddresses)
+
+plt.bar(ip_count.keys(),ip_count.values(),align='edge', width=30)
+
+plt.xticks(rotation=30)
+
+plt.show()
