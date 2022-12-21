@@ -1,6 +1,5 @@
 from collections import *
 import matplotlib.pyplot as plt
-import numpy
 
 
 
@@ -46,8 +45,33 @@ print()
 
 ip_count= Counter(IPaddresses)
 
-plt.bar(ip_count.keys(),ip_count.values(),align='edge', width=30)
+# plt.bar(ip_count.keys(),ip_count.values(),align='edge', width=30)
 
-plt.xticks(rotation=30)
+
+
+ip_common= Counter(IPaddresses).most_common(10)
+ip_values=[]
+ip_keys=[]
+
+
+for i in ip_common:
+    ip_keys.append(i[0])
+    ip_values.append(i[1])
+
+plt.bar(ip_keys,ip_values)
+
+plt.show()
+
+time_common= Counter(time).most_common(10)
+time_value=[]
+time_key=[]
+
+for a in time_common:
+    time_key.append(a[0])
+    time_value.append(a[1])
+
+plt.plot(time_key,time_value)
+plt.xticks(rotation=90)
+
 
 plt.show()

@@ -2,13 +2,13 @@ from collections import *
 import matplotlib.pyplot as plt
 
 
-
 fruits=[
 'banana',
 'apple','apple',
 'oranges','oranges','oranges',
 'cherry','cherry','cherry','cherry'
 ]
+
 
 fruits_counter= Counter(fruits)
 
@@ -19,7 +19,9 @@ print(fruits_counter.values())
 
 plt.bar(fruits_counter.keys(),fruits_counter.values())
 
+fruit_common= Counter(fruits_counter.most_common[2])
 
+print(fruit_common)
 plt.show()
 
 # dct={'cherry': 4, 'oranges': 3, 'apple': 2, 'banana': 1}
