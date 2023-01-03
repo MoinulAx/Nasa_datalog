@@ -15,15 +15,15 @@ try:
     for lines in NASA_file:
 
         a=lines.split('"')[1]
-        a=a.split('.')[1]
+        a=a.split('.')[0]
         a=a.split(' ')[0]
         IPaddresses.append(lines.split(" ")[0])
-        time.append(lines.split(":")[0])
+        time.append(lines.split(" ")[3])
         path.append(lines.split(" ")[6])
         type.append(a)
 
 
-except:
+except UnicodeDecodeError:
     print("uh-oh")
 
 
@@ -59,6 +59,8 @@ for i in ip_common:
     ip_values.append(i[1])
 
 plt.bar(ip_keys,ip_values)
+plt.xticks(rotation=90)
+
 
 plt.show()
 
