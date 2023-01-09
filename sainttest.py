@@ -6,15 +6,15 @@ files = []
 
 try:
     for lines in mainlog:
-        # x = lines.split(" ")[0]
-        # ipaddresses.append(x)
-        # y = lines.split(" ")[3]
-        # y = y.split(":")[0]
-        # dates.append(y)
-        # z = lines.split('"')[1]
+        x = lines.split(" ")[0]
+        ipaddresses.append(x)
+        y = lines.split(" ")[3]
+        y = y.split(":")[0]
+        dates.append(y)
+        z = lines.split('"')[1]
         # z = z.split(".")[1]
-        # z = z.split(" ")[0]
-        # files.append(z)
+        z = z.split(" ")[0]
+        files.append(z)
         z = lines.split('"')[1]
         z = z.split('"')[0]
         z = z.split(" ")[1]
