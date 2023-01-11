@@ -62,7 +62,7 @@ for i in ip_common:
     ip_values.append(i[1])
 
 plt.bar(ip_keys,ip_values,color='red')
-plt.xticks(rotation=45)
+plt.xticks(rotation=30)
 
 
 plt.show()

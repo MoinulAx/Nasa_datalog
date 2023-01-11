@@ -10,18 +10,18 @@ NASA_file= open("NASA_access_log_Jul95")
 plt.style.use("dark_background")
 
 for param in ['text.color', 'axes.labelcolor', 'xtick.color', 'ytick.color']:
-    plt.rcParams[param] = '0.9'  # very light grey
+    plt.rcParams[param] = '0.9'  
 
 for param in ['figure.facecolor', 'axes.facecolor', 'savefig.facecolor']:
-    plt.rcParams[param] = '#212946'  # bluish dark grey
+    plt.rcParams[param] = '#212946'  
 
 times=[]
 
 colors = [
-    '#08F7FE',  # teal/cyan
-    '#FE53BB',  # pink
-    '#F5D300',  # yellow
-    '#00ff41',  # matrix green
+    '#08F7FE',  
+    '#FE53BB',  
+    '#F5D300',  
+    '#00ff41',  
 ]
 
 try:
@@ -50,6 +50,7 @@ fig, ax = plt.subplots()
 for z in time_common:
     time_key.append(z[0])
     time_value.append(z[1])
+
 
 
 plt.plot(timekeys,timevalues,
